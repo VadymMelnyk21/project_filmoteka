@@ -1,0 +1,36 @@
+.gallery-card__image {
+    height: 398px;
+    border-radius: 5px;
+}
+
+.gallery-card__container {
+    padding-top: 10px;
+}
+
+// .gallery-card__title,
+// .gallery-card__text {
+//     font-weight: 500;
+//     font-size: 12px;
+//     line-height: 1.33;
+// }
+
+.gallery-card__title {
+    color: var(--primary-black);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.gallery-card__text {
+    color: var(--accent-color);
+}
+
+.gallery-card__rating{
+    margin-left: 7px;
+    display: inline-block;
+    text-align: center;
+    width: 36px;
+    height: 16px;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    color: var(--primary-white);
+}

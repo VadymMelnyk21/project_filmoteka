@@ -1,3 +1,10 @@
 @import './base/common';
 @import './units/variables';
 @import './units/visually-hidden';
+@import './components/section';
+@import './components/container';
+
+@import './layout/header';
+@import './layout/section-gallery';
+@import './components/gallery-card';
+@import './layout/footer';
