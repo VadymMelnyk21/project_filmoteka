@@ -1,19 +1,29 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
+
 <symbol id="heart" viewBox="0 0 20 20">
 <path fill="#ff6b08" style="fill: var(--color1, #ff6b08)" d="M10 18.84l-1.4-1.386c-5.2-4.554-8.6-7.626-8.6-11.386 0-3.073 2.4-5.447 5.5-5.447 1.7 0.001 3.4 0.793 4.5 2.079 1.1-1.262 2.705-2.060 4.497-2.077l0.003-0c3.1 0 5.5 2.376 5.5 5.444 0 3.763-3.4 6.833-8.6 11.386l-1.4 1.387z"></path>
 </symbol>
+
 <symbol id="close2" viewBox="0 0 20 20">
 <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2.5" d="M1.25 1.25l17.5 17.5M1.25 18.75l17.5-17.5"></path>
 </symbol>
+
 <symbol id="close" viewBox="0 0 20 20">
 <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.3333" d="M5.333 5.333l9.333 9.333M5.333 14.667l9.333-9.333"></path>
 </symbol>
+
 <symbol id="search" viewBox="0 0 20 20">
 <path fill="none" stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6667" d="M9.167 15.833c3.682 0 6.667-2.985 6.667-6.667s-2.985-6.667-6.667-6.667v0c-3.682 0-6.667 2.985-6.667 6.667s2.985 6.667 6.667 6.667v0zM17.5 17.5l-3.625-3.625"></path>
 </symbol>
+
 <symbol id="film" viewBox="0 0 20 20">
 <path fill="none" stroke="#818181" style="stroke: var(--color3, #818181)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6667" d="M16.517 1.667h-13.033c-1.003 0-1.817 0.813-1.817 1.817v0 13.033c0 1.003 0.813 1.817 1.817 1.817v0h13.033c1.003 0 1.817-0.813 1.817-1.817v0-13.033c0-1.003-0.813-1.817-1.817-1.817v0zM5.833 1.667v16.667M14.167 1.667v16.667M1.667 10h16.667M1.667 5.833h4.167M1.667 14.167h4.167M14.167 14.167h4.167M14.167 5.833h4.167"></path>
 </symbol>
+
+<symbol id="close-btn" viewBox="0 0 32 32">
+<path d="M26.667 7.303l-1.97-1.97-7.808 7.808-7.808-7.808-1.97 1.97 7.808 7.808-7.808 7.808 1.97 1.97 7.808-7.808 7.808 7.808 1.97-1.97-7.808-7.808 7.808-7.808z"></path>
+</symbol>
+
 </defs>
 </svg>
