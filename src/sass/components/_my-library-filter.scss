@@ -1,0 +1,41 @@
+.my-library-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 62px;
+
+    @media screen and (min-width: 768px) {
+        width: 336px;
+        margin: 40px auto;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 311px;
+    }
+}
+
+.my-library-filter__item {}
+
+.my-library-filter__btn {
+    width: 130px;
+    height: 44px;
+
+    color: var(--primary-white);
+    border: 1px solid var(--primary-white);
+
+    @media screen and (min-width: 768px) {
+            width: 152px;
+            height: 44px;
+        }
+
+    @media screen and (min-width: 768px) {
+            width: 147px;
+            height: 42px;
+        }
+    
+    transition: border 250ms linear;
+
+    &:hover,
+    &:focus {
+        border: none;
+    }
+}
