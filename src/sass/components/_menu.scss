@@ -1,0 +1,37 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu__icon {
+    width: 24px;
+    height: 24px;
+}
+
+.menu__text {
+    margin-left: 10px;
+    font-size: 30px;
+    line-height: 1.17;
+
+    color: var(--primary-white);
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+
+.controls__item {
+    line-height: 1.17;
+    text-transform: uppercase;
+    color: var(--primary-white);
+}
+
+.controls__item+.controls__item {
+    margin-left: 40px;
+}

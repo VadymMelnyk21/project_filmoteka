@@ -1,7 +1,10 @@
 .header {
+    background-color: var(--primary-black);
+}
+
+.header__container{
     height: 230px;
     padding-top: 40px;
-    background-color: var(--primary-black);
 
     @media screen and (min-width: 768px) {
         height: 215px;
@@ -9,41 +12,106 @@
     }
 }
 
-.header-home {}
-
-.menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header--background-base{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.menu__logo {}
+.header--background-home {
+    background-image: linear-gradient(
+    rgba(0, 0, 0, 0.56),
+    rgba(0, 0, 0, 0.56)),
+    url('../images/background/home-mobile.jpg');
 
-.menu__link {}
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.56),
+                rgba(0, 0, 0, 0.56)),
+                url('../images/background/home-mobile@2x.jpg');
+        }
 
-.menu__icon {}
+    @media screen and (min-width: 768px) {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.56),
+            rgba(0, 0, 0, 0.56)),
+            url('../images/background/home-tablet.jpg');
+        
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.56),
+                    rgba(0, 0, 0, 0.56)),
+                    url('../images/background/home-tablet@2x.jpg');
+            }
+    }
 
-.menu__text {
-    margin-left: 10px;
-    font-size: 30px;
-    line-height: 1.17;
+    @media screen and (min-width: 1024px) {
+        max-width: 1024px;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.56),
+            rgba(0, 0, 0, 0.56)),
+            url('../images/background/home-desktop.jpg');
 
-    color: var(--primary-white);
-
-    @media screen and (max-width: 767px) {
-        display: none;        
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.56),
+                rgba(0, 0, 0, 0.56)),
+                url('../images/background/home-desktop@2x.jpg');
+        }
     }
 }
 
-.tabs {}
+.header--background-my-librery {
+    background-image: linear-gradient(
+    rgba(0, 0, 0, 0.56),
+    rgba(0, 0, 0, 0.56)),
+    url('../images/background/my-library-mobile.jpg');
 
-.controls {}
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.56),
+                rgba(0, 0, 0, 0.56)),
+                url('../images/background/my-library-mobile@2x.jpg');
+        }
 
-.controls__item {
-    line-height: 1.17;
-    text-transform: uppercase;
-    color: var(--primary-white);
-}
-.controls__item+.controls__item{
-    margin-left: 40px;
+    @media screen and (min-width: 768px) {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.56),
+            rgba(0, 0, 0, 0.56)),
+            url('../images/background/my-library-tablet.jpg');
+        
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.56),
+                    rgba(0, 0, 0, 0.56)),
+                    url('../images/background/my-library-tablet@2x.jpg');
+            }
+    }
+
+    @media screen and (min-width: 1024px) {
+        max-width: 1024px;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.56),
+            rgba(0, 0, 0, 0.56)),
+            url('../images/background/my-library-desktop.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.56),
+                rgba(0, 0, 0, 0.56)),
+                url('../images/background/my-library-desktop@2x.jpg');
+        }
+    }
 }
