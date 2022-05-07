@@ -1,0 +1,43 @@
+.form {
+    position: relative;
+    margin: 0 auto;
+    width: 280px;
+
+    @media screen and (min-width: 768px) {
+        width: 336px;
+    }
+}
+
+.form__input {
+    width: 100%;
+    padding: 4px 2px;
+    border: 0;
+    border-bottom: 0.5px solid #fff;
+    background-color: transparent;
+    color: var(--primary-white);
+    font-size: 14px;
+}
+
+.form__input::placeholder{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.17;
+    color: var(--primary-white);
+}
+
+.form__btn {
+    position: absolute;
+    right: -2px;
+    bottom: 4px;
+    padding: 2px;
+    width: 16px;
+    height: 16px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.form__icon {
+    width: 12px;
+    height: 12px;
+}

@@ -21,7 +21,24 @@
           </div>
         </nav>
       </div>
-      <div class="serch"></div>
+      <div class="search">
+        <div class="search__container">
+          <form class="form" id="search-form-films">
+            <input
+              class="form__input"
+              type="text"
+              name="searchQuery"
+              autocomplete="off"
+              placeholder="Пошук фільмів"
+            />
+            <button class="form__btn" type="button">
+              <svg class="form__icon">
+                <use href="./images/svg/icons.svg#search"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </header>
