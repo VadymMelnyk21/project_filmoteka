@@ -4,6 +4,8 @@ const refs = {
     headerRef: document.querySelector('[data-header]'),
 };
 
+setActiveTab()
+
 refs.headerControls.addEventListener('click', controlClickHeader);
 
 function controlClickHeader(e) {
@@ -12,22 +14,39 @@ function controlClickHeader(e) {
     if (e.target.nodeName !== 'A') {
         return;
     }
-
-    const currentControlHeader = refs.headerControls.querySelector('.controls__link--active')
-
-    if (currentControlHeader) {
-        currentControlHeader.classList.remove('controls__link--active');
-
-        const paneId = getPaneId(currentControlHeader);
-        const pane = getPaneById(paneId);
-        pane.classList.remove('header-pane--active');
-
-    }
+    removeActiveTab()
 
     const controlItem = e.target;
     controlItem.classList.add('controls__link--active');
 
     const paneId = getPaneId(controlItem);
+    setActivePane(paneId);
+}
+
+function setActiveTab() {
+    const consoleItems = refs.headerControls.querySelectorAll('a');
+    const control = consoleItems[0];
+
+    control.classList.add('controls__link--active');
+
+    const paneId = getPaneId(control);
+    setActivePane(paneId);
+}
+
+function removeActiveTab() {
+    const currentControl = refs.headerControls.querySelector('.controls__link--active');
+
+    if (!currentControl) {
+        return;
+    }
+
+    currentControl.classList.remove('controls__link--active');
+
+    const paneId = getPaneId(currentControl);
+    removePaneId(paneId);
+}
+
+function setActivePane(paneId) {
     const pane = getPaneById(paneId);
     pane.classList.add('header-pane--active');
 
@@ -40,6 +59,11 @@ function controlClickHeader(e) {
         refs.headerRef.classList.remove('header--background-my-library')
         refs.headerRef.classList.add('header--background-home')
     }
+}
+
+function removePaneId(paneId) {
+    const pane = getPaneById(paneId);
+    pane.classList.remove('header-pane--active');
 }
 
 function getPaneId(control) {
