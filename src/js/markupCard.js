@@ -1,30 +1,30 @@
-const colorsCard = [
-    {
-        hex: '#4287f5',
-        rating: '8.0',
-    },
-    { hex: '#42f5d1' },
-    {
-        hex: '#7bf542',
-        rating: '8.0',
-    },
-    { hex: '#f5ef42' },
-    {
-        hex: '#f58142',
-        rating: '8.0',
-    },
-    { hex: '#f54242' },
-    {
-        hex: '#9342f5',
-        rating: '8.0',
-    },
-    { hex: '#f542a4' },
-    {
-        hex: '#f542ef',
-        rating: '8.0',
-    },
-    { hex: '#42daf5' },
-];
+// const colorsCard = [
+//     {
+//         hex: '#4287f5',
+//         rating: '8.0',
+//     },
+//     { hex: '#42f5d1' },
+//     {
+//         hex: '#7bf542',
+//         rating: '8.0',
+//     },
+//     { hex: '#f5ef42' },
+//     {
+//         hex: '#f58142',
+//         rating: '8.0',
+//     },
+//     { hex: '#f54242' },
+//     {
+//         hex: '#9342f5',
+//         rating: '8.0',
+//     },
+//     { hex: '#f542a4' },
+//     {
+//         hex: '#f542ef',
+//         rating: '8.0',
+//     },
+//     { hex: '#42daf5' },
+// ];
 
 const galleryRef = document.querySelector('[data-gallery]')
 
@@ -46,11 +46,11 @@ fetchTrending()
     .then(data => {
         console.log(data);
         const galleryItems = data.results
-            .map(({ title, vote_average, release_date }) =>
+            .map(({ title, vote_average, release_date, poster_path }) =>
                 `<div class="films-gallery__item">
             <a href="#!" class="films-gallery__link gallery-card">
             <div class="gallery-card__image" style="background-color:#45564;">
-            <img src="#!" alt="test" />
+            <img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="test" />
             </div>
             <div class="gallery-card__container">
             <p class="gallery-card__title">${title}</p>
