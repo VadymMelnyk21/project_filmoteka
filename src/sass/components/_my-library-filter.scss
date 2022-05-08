@@ -1,11 +1,11 @@
 .my-library-filter {
     display: flex;
     justify-content: space-between;
-    margin-top: 62px;
+    // margin-top: 62px;
 
     @media screen and (min-width: 768px) {
         width: 336px;
-        margin: 40px auto;
+        margin: 0 auto;
     }
 
     @media screen and (min-width: 1024px) {

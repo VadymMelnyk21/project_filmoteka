@@ -2,6 +2,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    margin-bottom: 50px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 34px;
+    }
 }
 
 .menu__logo-container {
@@ -28,6 +34,7 @@
 
 .controls{
     display: flex;
+    align-items: center;
 }
 
 .controls__item+.controls__item {
