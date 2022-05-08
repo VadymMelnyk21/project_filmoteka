@@ -5,4 +5,4 @@ const a=[{hex:"#4287f5",rating:"8.0"},{hex:"#42f5d1"},{hex:"#7bf542",rating:"8.0
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/markupCard");
 },{"./sass/main.scss":"clu1","./js/markupCard":"RogU"}]},{},["Focm"], null)
-//# sourceMappingURL=/project_filmoteka/src.bcd43847.js.map
+//# sourceMappingURL=/project_filmoteka/src.8e0d7b9b.js.map
