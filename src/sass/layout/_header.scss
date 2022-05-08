@@ -119,3 +119,11 @@
         }
     }
 }
+
+.header-pane{
+    display: none;
+}
+
+.header-pane--active{
+    display: block;
+}

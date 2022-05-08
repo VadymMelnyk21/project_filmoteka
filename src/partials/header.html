@@ -1,4 +1,4 @@
-<header class="header header--background-base header--background-home">
+<header class="header header--background-base" data-header>
   <div class="container">
     <div class="menu">
       <div class="menu__logo">
@@ -13,7 +13,7 @@
       </div>
       <nav>
         <div class="tabs">
-          <ul class="controls" data-controls>
+          <ul class="controls" data-header-controls>
             <li class="controls__item">
               <a href="#header-pane__home" class="controls__link">home</a>
             </li>
@@ -25,9 +25,9 @@
       </nav>
     </div>
 
-    <div class="header-panes">
+    <div class="header-panes" data-header-panes>
       <!-- home start -->
-      <div class="header-pane__search" id="header-pane__home">
+      <div class="header-pane__search header-pane" id="header-pane__home">
         <form class="form" id="search-form-films">
           <input
             class="form__input"
@@ -46,13 +46,13 @@
       <!-- home end -->
 
       <!-- my-library start -->
-      <!-- <div class="header-pane__my-library-filter" id="header-pane__my-library">
+      <div class="header-pane__my-library-filter header-pane" id="header-pane__my-library">
         <div class="my-library-filter">
           <button class="my-library-filter__btn btn btn--active" type="button">
             <span>Watched</span></button
           ><button class="my-library-filter__btn btn" type="button"><span>queue</span></button>
         </div>
-      </div> -->
+      </div>
       <!-- my-library end -->
     </div>
   </div>
