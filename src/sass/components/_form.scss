@@ -16,6 +16,13 @@
     background-color: transparent;
     color: var(--primary-white);
     font-size: 14px;
+
+    transition: border 250ms linear;
+
+    &:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
 }
 
 .form__input::placeholder{
