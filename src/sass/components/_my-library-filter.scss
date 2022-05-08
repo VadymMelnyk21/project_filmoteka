@@ -1,33 +1,33 @@
 .my-library-filter {
-    display: flex;
-    justify-content: space-between;
-    // margin-top: 62px;
+    text-align: center;
+}
+
+.my-library-filter__btn+.my-library-filter__btn{
+margin-left: 20px;
 
     @media screen and (min-width: 768px) {
-        width: 336px;
-        margin: 0 auto;
+        margin-left: 32px;
     }
 
     @media screen and (min-width: 1024px) {
-        width: 311px;
+        margin-left: 16px;
     }
 }
 
 .my-library-filter__btn {
     width: 130px;
-    height: 44px;
+    padding: 14px 30px;
 
     color: var(--primary-white);
     border: 1px solid var(--primary-white);
 
     @media screen and (min-width: 768px) {
             width: 152px;
-            height: 44px;
         }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
             width: 147px;
-            height: 42px;
+            padding: 13px 30px;
         }
     
     transition: border 250ms linear;
