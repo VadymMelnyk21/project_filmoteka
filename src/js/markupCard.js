@@ -33,7 +33,7 @@ const galleryRef = document.querySelector('[data-gallery]')
 const apiKey = '9247604179ba4f8029cfb34035e24946';
 
 function fetchTrending() {
-    return fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}`)
+    return fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}&language=uk`)
         .then(response => {
             if (!response.ok) {
                 throw Error(response.status);
@@ -42,9 +42,24 @@ function fetchTrending() {
         });
 }
 
+function fetchGeres() {
+    return fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=uk`)
+        .then(response => {
+            if (!response.ok) {
+                throw Error(response.status);
+            }
+            return response.json();
+        });
+}
+
+fetchGeres()
+    .then(data => console.log(data))
+    .catch(error => console.log(error))
+
 fetchTrending()
     .then(data => {
         console.log(data);
+
         const galleryItems = data.results
             .map(({ title, vote_average, release_date, poster_path }) =>
                 `<div class="films-gallery__item">
