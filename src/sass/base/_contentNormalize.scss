@@ -1,0 +1,27 @@
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    min-height: 230px;
+    // background: lightcyan;
+    @media screen and (min-width: 768px) {
+        min-height: 215px;
+    }
+}
+
+// footer {
+//     min-height: 50px;
+//     background: PapayaWhip;
+// }
+
+/* Trick */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
