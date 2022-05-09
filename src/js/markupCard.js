@@ -54,7 +54,7 @@ fetchTrending()
             </div>
             <div class="gallery-card__container">
             <p class="gallery-card__title">${title}</p>
-            <p class="gallery-card__text">Drama, Comedy | ${release_date} 
+            <p class="gallery-card__text">Drama, Comedy | ${release_date.slice(0, 4)} 
 
             ${vote_average ? `<span class="gallery-card__rating">${vote_average}</span>` : ''}
             </p>
