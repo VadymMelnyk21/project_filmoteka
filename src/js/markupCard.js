@@ -49,8 +49,8 @@ fetchTrending()
             .map(({ title, vote_average, release_date, poster_path }) =>
                 `<div class="films-gallery__item">
             <a href="#!" class="films-gallery__link gallery-card">
-            <div class="gallery-card__image" style="background-color:#45564;">
-            <img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="test" />
+            <div class="gallery-card__image-container" style="background-color:#455643;">
+            <img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="${title}" class="gallery-card__image" />
             </div>
             <div class="gallery-card__container">
             <p class="gallery-card__title">${title}</p>
