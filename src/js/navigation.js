@@ -1,4 +1,5 @@
 import { refs } from './refs';
+import { markupCardMyLibrary, createCard } from './markupCard';
 
 setActiveTab()
 
@@ -17,6 +18,7 @@ function controlClickHeader(e) {
 
     const paneId = getPaneId(controlItem);
     setActivePane(paneId);
+
 }
 
 function setActiveTab() {
@@ -49,11 +51,15 @@ function setActivePane(paneId) {
     if (paneId === 'header-pane__my-library') {
         refs.headerRef.classList.remove('header--background-home')
         refs.headerRef.classList.add('header--background-my-library')
+
+        markupCardMyLibrary();
     }
 
     if (paneId === 'header-pane__home') {
         refs.headerRef.classList.remove('header--background-my-library')
         refs.headerRef.classList.add('header--background-home')
+
+        createCard()
     }
 }
 

@@ -6,4 +6,4 @@ import './js/markupCard';
 
 import './js/navigation';
 
-import './js/fetchTrending';
+import './js/fetch';

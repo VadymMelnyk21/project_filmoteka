@@ -1,38 +1,34 @@
 import { refs } from './refs';
+import { fetchTrending, fetchGeres } from './fetch';
 
 const apiKey = '9247604179ba4f8029cfb34035e24946';
 
-async function fetchTrending() {
-    return await fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}&language=uk`)
-        .then(response => {
-            if (!response.ok) {
-                throw Error(response.status);
-            }
-            return response.json();
-        });
-}
+// async function fetchTrending() {
+//     return await fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}&language=uk`)
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw Error(response.status);
+//             }
+//             return response.json();
+//         });
+// }
 
-function fetchGeres() {
-    return fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=uk`)
-        .then(response => {
-            if (!response.ok) {
-                throw Error(response.status);
-            }
-            return response.json();
-        });
-}
+
 
 fetchGeres()
     .then(data => console.log(data))
     .catch(error => console.log(error))
 
-fetchTrending()
-    .then(data => {
-        console.log(data);
+export function createCard() {
+    refs.galleryRef.innerHTML = '';
 
-        const galleryItems = data.results
-            .map(({ title, vote_average, release_date, poster_path }) =>
-                `<div class="films-gallery__item">
+    fetchTrending()
+        .then(data => {
+            console.log(data);
+
+            const galleryItems = data.results
+                .map(({ title, vote_average, release_date, poster_path }) =>
+                    `<div class="films-gallery__item">
             <a href="#!" class="films-gallery__link gallery-card">
             <div class="gallery-card__image-container" style="background-color:#455643;">
             <img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="${title}" class="gallery-card__image" />
@@ -46,11 +42,12 @@ fetchTrending()
             </div>
         </a>
         </div>`)
-            .join('');
+                .join('');
 
-        refs.galleryRef.insertAdjacentHTML("beforeend", galleryItems);
-    })
-    .catch(error => console.log(error))
+            refs.galleryRef.insertAdjacentHTML("beforeend", galleryItems);
+        })
+        .catch(error => console.log(error))
+}
 
 ////////////////////////////////////////////////////////////////
 
@@ -73,3 +70,15 @@ fetchTrending()
 //     .join('');
 
 // galleryRef.insertAdjacentHTML("beforeend", galleryItems);
+
+///////////////////////////////////////////////////////////////
+
+export function markupCardMyLibrary() {
+    refs.galleryRef.innerHTML = '';
+
+    // if (refs.galleryRef.length == 0) {
+
+    refs.galleryRef.innerHTML = `<div> Ваша бібліотека покищо порожня </div>`;
+    // }
+    return
+}
