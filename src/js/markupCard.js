@@ -1,34 +1,4 @@
-// const colorsCard = [
-//     {
-//         hex: '#4287f5',
-//         rating: '8.0',
-//     },
-//     { hex: '#42f5d1' },
-//     {
-//         hex: '#7bf542',
-//         rating: '8.0',
-//     },
-//     { hex: '#f5ef42' },
-//     {
-//         hex: '#f58142',
-//         rating: '8.0',
-//     },
-//     { hex: '#f54242' },
-//     {
-//         hex: '#9342f5',
-//         rating: '8.0',
-//     },
-//     { hex: '#f542a4' },
-//     {
-//         hex: '#f542ef',
-//         rating: '8.0',
-//     },
-//     { hex: '#42daf5' },
-// ];
-
-const galleryRef = document.querySelector('[data-gallery]')
-
-//////////////////////////////////////////////////////////////////
+import { refs } from './refs';
 
 const apiKey = '9247604179ba4f8029cfb34035e24946';
 
@@ -78,7 +48,7 @@ fetchTrending()
         </div>`)
             .join('');
 
-        galleryRef.insertAdjacentHTML("beforeend", galleryItems);
+        refs.galleryRef.insertAdjacentHTML("beforeend", galleryItems);
     })
     .catch(error => console.log(error))
 

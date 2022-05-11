@@ -1,8 +1,4 @@
-const refs = {
-    headerControls: document.querySelector('[data-header-controls]'),
-    headerPanes: document.querySelector('[data-header-panes]'),
-    headerRef: document.querySelector('[data-header]'),
-};
+import { refs } from './refs';
 
 setActiveTab()
 
